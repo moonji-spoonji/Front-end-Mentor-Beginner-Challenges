@@ -1,0 +1,141 @@
+body {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;    
+    background-color: hsl(30, 10%, 34%); /* Stone 100 */ 
+    background-color: hsl(30, 18%, 87%); /* Stone 150 */
+    background-color: hsl(30, 54%, 90%); /* Stone 100 */
+    margin: auto ;
+
+    /* The same as flexbox:
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    */
+    display: grid;
+    place-items: center;
+    margin: 5% 0;
+}
+
+.card {
+    width: 45%;
+    /* padding: 30px; */
+    padding: 3%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+img {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+}
+
+p, ul, li, table {
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    color: hsl(30, 10%, 34%);
+    padding-bottom: 10px;
+}
+
+
+/* START OF STYLING THE INSTRUCTIONS NUMBERS */
+ol {
+    list-style: none;
+    counter-reset: item;
+}
+
+ol li {
+    counter-increment: item;
+}
+
+ol li::before {
+    content: counter(item) ". ";
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+    /* keeps the numbers separate from the other text */
+    position: absolute; 
+    /* to make the numbers line up beside each of the instructions*/
+    left: 28%; 
+}
+/* END OF STYLING INSTRUCTIONS NUMBERS */
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+h2 {
+    color: hsl(14, 45%, 36%); /* Brown 800 */
+    font-weight: 300;
+}
+
+hr {
+    color: hsl(24, 5%, 18%); /* Stone 900 */
+}
+
+.prep-time-section {
+    background-color: hsl(330, 100%, 98%);
+    padding: 5px 20px 0px;
+    border-radius: 10px;
+}
+
+.prep-time-title {
+    color: hsl(332, 51%, 32%);
+    font-family: "Outfit", sans-serif;
+    font-size: larger;
+    margin-bottom: 0px;
+}
+
+/* adds space btwn bullet points and the list item text */
+.prep-time-section li, .ingredients li {
+    padding-left: 20px;
+}
+
+/* set the color of the bullet points to the color of the Ingredients heading */
+.ingredients li::marker {
+    color:  hsl(14, 45%, 36%);
+}
+
+/* set the color of the bullet points to the color of the Preparation Time heading */
+.prep-time-section li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+
+.nutrition {
+    padding-bottom: 10%;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 2em;
+}
+
+p strong {
+    color: hsl(14, 45%, 36%);
+}
+
+.nutrition-grid p {
+    padding: 0px;
+    margin: 5px;
+}
+/* 
+th {
+    padding-left: 13em;
+    text-align: start;
+    color: hsl(14, 45%, 36%);
+    padding-bottom: 10px;
+    border-top: 2px solid black;
+}
+
+td {
+    border-top: 2px solid black;
+    padding: 0px 2em;
+} */
