@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+body {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+section {
+    width: 900px;
+    height: auto;
+    min-width: 700px;
+    border: 2px solid hsl(221, 100%, 96%);
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    box-shadow: 16px 40px 50px 12px hsl(221, 100%, 96%)
+}
+
+@media (max-width: 376px){
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+    .result {
+        width: 405px;
+        border-radius: 0 0 40px 40px;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    margin: 30px auto;
+
+    border-radius: 50px;
+    border: none;
+   
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+   
+    font-size: 18px;
+    font-weight: 700;
+}
+
+button:hover {
+    background: linear-gradient( hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.result {
+    /* border: 2px solid blue; */
+    border-radius: 40px;
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient( hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+}
+
+.inner {
+    display: grid;
+    /* grid-template-rows: 1fr auto 1.75fr ; */
+    /* grid-template-rows: 1fr auto auto ; */
+    /* grid-template-rows: 2fr auto auto ; */
+    /* grid-template-rows: auto auto auto ; */
+    grid-template-rows: auto ;
+    text-align: center;
+    place-items: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.inner h2 {
+    color: hsl(241, 100%, 89%);
+    font-size: 26px;
+}
+
+.circle {
+    width: 225px;
+    height: 225px;
+    /* border: 2px solid red; */
+    border-radius: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0px;
+    padding: 0px; */
+
+    background: linear-gradient( hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.score {
+    font-size: 72px;
+    margin: 0;
+}
+
+.total {
+    margin: 0;
+    color: hsl(241, 100%, 89%);
+}
+
+.status {
+    padding-bottom: 50px;
+}
+
+.great {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.user-description {
+    /* width: auto; */
+    padding: 0px 60px;
+    color: hsl(241, 100%, 89%);
+    font-weight: 700;
+    margin: 0px 30px;
+}
+
+.summary {
+    padding: 20px;
+    /* border: 2px solid blue; */
+}
+.summary h1.title {
+    color: hsl(224, 30%, 27%);
+    font-size: 26px;
+    font-weight: 700;
+    font-weight: 800;
+}
+
+.category {
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    justify-content: space-between;
+    border: 2px solid;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 20rem;
+    padding: 0px 15px;
+    font-size: 20px;
+}
+
+.category .title {
+    display: flex;
+}
+
+.category .title  h4 {
+    padding-left: 10px;
+}
+
+.reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 10%);
+}
+
+.memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 10%);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 10%);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 10%);
+}
+
+.summary-score {
+    color: hsl(224, 30%, 27%);
+    font-size: 20px;
+}
+
+/* 
+NEUTRAL
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+PRIMARY
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+GRADIENTS
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+*/
+
+p {
+    font-size: 18px;
+}
+

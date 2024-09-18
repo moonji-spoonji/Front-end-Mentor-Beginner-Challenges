@@ -1,0 +1,197 @@
+/* Font Family: Inter with weights: 400 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Font Family: Lexend Deca with weight: 400 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+/* 
+
+### Primary
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+*/
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h1, .number {
+    font-size: 30px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+.card{
+    background-color: hsl(244, 38%, 16%);
+    width: 50%;
+    max-width: 932px;
+    /* padding: 45px; */
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Inter", sans-serif;
+    /* position: absolute; */
+    position: relative;
+    border-radius: 10px;
+}
+
+.left {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.description {
+    line-height: 24px;
+}
+
+.bottom-3 {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: flex-start;
+    /* margin-right: 200px; */
+}
+
+.companies {
+    /* margin-left: 40%; */
+    margin: 0;
+    padding: 0;
+    margin-right: 10%;
+}
+
+.number {
+    margin-bottom: 0;
+}
+
+.text {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: smaller;
+    padding-top: 0px;
+    margin-top: 5px;
+}
+
+.covered {
+    background: hsl(277, 64%, 61%);
+    display: block;
+    background-image: url("/09-stats-preview-card-component-main/images/image-header-desktop.jpg");
+
+    background-size: contain;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+
+    background-blend-mode: screen;
+    background-blend-mode: overlay;
+
+    border-radius: 0 10px 10px 0;
+
+    /* object-fit: cover; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-blend-mode:overlay; */
+    /* position: absolute; */
+}
+
+.right {
+    /* background-image: url("/09-stats-preview-card-component-main/images/image-header-desktop.jpg"); */
+    /* background-size: auto; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* background-color: hsl(277, 64%, 61%); */
+}
+
+.right::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 59%, 78%); 
+    /* Change the color and opacity as needed */
+  }
+
+@media (max-width: 375px){
+    /* body {
+        overflow: scroll;
+    } */
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "content";
+        text-align: center;
+        width: 320px;
+        height: 105vh;
+    }
+    
+    /* .right { */
+    .covered {
+        grid-area: image;
+        height: 264px;
+        
+        border-radius: 10px 10px 0 0;
+
+        /* height: fit-content; */
+        /* height: min-content; */
+        /* height: max-content; */
+        /* height: initial; */
+        /* height: inherit; */
+        
+        /* object-fit: contain; */
+        /* background-size: cover; */
+        /* background-size: contain; */
+        /* transform: scale(); */
+        /* background-size: inherit; */
+        /* width: 300px; */
+    }
+
+    .left {
+        grid-area: content;
+        padding: 15px;
+    }
+
+    .bottom-3 {
+        display: flex;
+        flex-direction: column;
+    }
+}

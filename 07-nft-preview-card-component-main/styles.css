@@ -1,0 +1,114 @@
+/* Font Family: Outfit with weights: 300, 400, and 600 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* 
+
+### Primary
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+*/
+
+body {
+    background-color: hsl(217, 54%, 11%);
+
+    font-family: "Outfit", sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+}
+
+img {
+    width: 100%;
+    
+    border-radius: 10px;
+}
+
+h1, .creator .name {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+hr {
+    border: 1px solid hsla(215, 51%, 70%, 10%);
+
+}
+
+
+.card {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: hsl(216, 50%, 16%);
+
+    padding: 25px;
+    width: 300px;
+
+    border-radius: 20px;
+
+}
+
+.promotion, .creator, .time, .attribution {
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.etherium {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.time, .etherium {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.time img, .etherium img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+/* .time::before {
+    content: url("/07-nft-preview-card-component-main/images/icon-clock.svg");
+    margin-right: 5px;
+} */
+
+.creator {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+.avatar {
+    width: 12%;
+    margin-right: 20px;
+    border: 1.5px solid white;
+    border-radius: 90px;
+}
+
+.attribution {
+    margin-top: 10px;
+    font-size: 12px;
+}
