@@ -1,0 +1,144 @@
+/* Font Family: Manrope font weights: 500 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+/* 
+
+Very Dark Grayish Blue: hsl(217, 19%, 35%)
+Desaturated Dark Blue: hsl(214, 17%, 51%)
+Grayish Blue: hsl(212, 23%, 69%)
+Light Grayish Blue: hsl(210, 46%, 95%)
+
+*/
+
+body {
+    font-family: "Manrope", sans-serif;
+
+    display: flex;
+    width: 100vw;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: hsl(210, 46%, 95%);
+
+}
+
+
+.card {
+    width: 1300px;
+    width: 70em;
+    width: 60vw;
+    width: 50vw;
+    height: 400px;
+    height: 30em;
+    height: 27em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+/* .drawers {
+    height: 20rem;
+
+} */
+
+.left {
+    background-image: url("/13-article-preview-component-master/images/drawers.jpg");
+    background-size: cover;
+    height: 400px;
+    height: 30em;
+    height: 27em;
+    width: 20vw;
+    /* height: 100%; */
+
+    border-radius: 10px 0 0 10px;
+}
+
+.right{
+    padding: 40px;
+}
+
+.title {
+    color: hsl(212, 23%, 69%); 
+    color: hsl(210, 46%, 95%); 
+    color: hsl(217, 19%, 35%); 
+    font-size: 30px;
+}
+
+.description {
+    color: hsl(214, 17%, 51%);
+    font-weight: 500; 
+    font-size: 20px;
+    line-height: 1.5em;
+}
+.date {
+    color: hsl(212, 23%, 69%);
+}
+
+.user {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    grid-template-areas: 
+    "picture name"
+    "picture date";
+
+}
+
+.avatar{ 
+    margin: auto;
+    grid-area: picture;
+    
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+.name, .date {
+    text-align: justify;
+}
+
+.name {
+    grid-area: name;
+
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.date {
+    grid-area: date;
+    text-align: left;
+
+    margin-top: 5px;
+}
+
+.share-area {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+
+    border-radius: 30px;
+}
+
+.share {
+    width: 20px;
+    height: 20px;
+}

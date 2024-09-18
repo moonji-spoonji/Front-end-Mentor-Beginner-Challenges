@@ -1,0 +1,152 @@
+/* Font-Family: Karla with weights: 400 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* 
+
+Primary
+Cyan: hsl(179, 62%, 43%)
+Bright Yellow: hsl(71, 73%, 54%)
+
+Neutral
+Light Gray: hsl(204, 43%, 93%)
+Grayish Blue: hsl(218, 22%, 67%)
+
+*/
+
+body {
+    font-family: "Karla", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100svh;
+
+    background-color: hsl(204, 43%, 93%);
+
+    overflow: hidden;
+
+}
+
+button {
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+}
+
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    line-height: 22px;
+}
+
+li, .cost {
+    color: hsla(0, 0%, 100%, 0.78);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "top top"
+    "subscription why";
+
+    width: 35vw;
+    min-height: 50vh;
+
+    border-radius: 10px;
+}
+
+.top, .subscription, .why-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: white;
+    
+    padding: 0 40px;
+}
+
+.top {
+    grid-area: top;
+}
+
+.join {
+    color: hsl(179, 62%, 43%);
+}
+
+.guarantee {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.description {
+    color: hsl(218, 22%, 67%);
+    margin-top: 5px;
+    line-height: 28px;
+}
+
+.subscription {
+    grid-area: subscription;
+
+    background-color: hsl(179, 62%, 43%);;
+}
+
+.cost {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 18px;
+
+    margin-bottom: 0;
+}
+
+.amount {
+    color: white;
+    font-size: 36px;
+    padding-right: 12px;
+    font-weight: 700;
+}
+
+.sub-title, .why {
+    margin-bottom: 0;
+}
+
+.why-us {
+    grid-area: why;
+
+    background-color: hsl(179, 61%, 49%);
+}
+
+
+@media (max-width: 376){
+    .card {
+        /* grid-template-columns: 1fr; */
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "top"
+        "subscription"
+        "why"
+        ;
+    }
+    
+    .top {
+        grid-area: top;
+    }
+    
+    .subscription {
+        grid-area: subscription;
+    }
+    
+    .why-us {
+        grid-area: why;
+    }
+}
+
